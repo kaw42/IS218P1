@@ -3,13 +3,30 @@ body {
 }
 
 .red {
-        color: pink;
+    color: pink;
 }
 
-.makeBigger{
+.makeBigger {
     font-size: 110%;
 }
+
 .w-100 {
-  width: 100% !important;
-  height: 75vh;
+    width: 100% !important;
+    height: 75vh;
+}
+
+.tab {
+    margin-left: 40px;
+}
+
+.tab2 {
+    margin-left: 60px;
+}
+
+.tab3 {
+    margin-left: 80px;
+}
+
+.tab4 {
+    margin-left: 100px;
 }
