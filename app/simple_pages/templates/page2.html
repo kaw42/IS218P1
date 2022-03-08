@@ -34,15 +34,19 @@
     docker rm = remove containers <br>
     docker run = run a command in a new container <br>
     </p>
-    <h4>How to start the project</h4>
+    <h4>How to start the project and access the container with the terminal</h4>
     <p>
-
+        Open a terminal and go to the app directory with your docker file. You can build a container using the docker
+        "build" command. ex.) docker build -t container-name. This command uses the docker file to build a new container image and the
+        "-t" flag tags your image. <br>
     </p>
 
-    <h4>How to access the container with the terminal</h4>
     <p>
-
+        To access the container, you have to use the "docker run" command. ex.) docker run -dp 3000:3000 container_name.
+        The 3000:3000 means you are creating a mapping between the host’s port 3000 to the container’s port 3000. Now
+        when you go to your browser and enter http://localhost:3000, you should be able to see your app.
     </p>
+
     </body>
 {% endblock %}
 </html>
