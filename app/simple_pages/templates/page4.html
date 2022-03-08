@@ -4,10 +4,46 @@
 {% block content %}
     <body style="background-color:#FEE3C9 ;">
      <h1>CI/CD Page</h1>
-     <p>Shintaro Tsuji founded Sanrio on August 10, 1960, then known as the Yamanashi Silk Company using ¥1,000,000 in
-        capital. In 1962, Tsuji expanded his enterprise from silk to rubber sandals with flowers painted on them. Tsuji
-        noticed his success gained by merely adding a cute design to the sandals.
+     <p>CI/CD is continuous integration and continuous development. CI/CD bridges the gaps between development and
+         operation activities and teams by enforcing automation in building, testing and deployment of applications.
+         According to the continuous delivery article, Martin Fowler explains that "The principal benefits of continuous
+         delivery are: reduced deployment risk, believable progress, and user feedback" (Fowler 2013). Fowler also goes
+         on to state in his continuous integration article, "Continuous Integrations doesn't get rid of bugs, but it
+         does make them dramatically easier to find and remove. In this respect it's rather like self-testing code.
+     </p>
+
+      <h4>Having the project set up to use GitHub actions</h4>
+    <p>
+        In order to have my project setup using GitHub actions, I had to add to actions in secrets. I added
+        DOCKER_PASSWORD, DOCKER_USERNAME, and HEROKU_API_KEY. This allowed GitHub to access docker and heroku in order
+        to ship the container and deploy the applications.
     </p>
+
+      <h4>Review code using a development server before merging pull requests</h4>
+    <p>
+        You can review code using a development server before merging pull requests by testing that the test files match
+        the html files, this can result in either passes or failures. In this project, I used pytest to test my code in
+        pycharm before merging pull requests.
+    </p>
+
+     <h4>Deploy master to a production server</h4>
+    <p>
+
+    </p>
+
+      <h4>deploy an image of your project to Dockerhub when master is updated</h4>
+    <p>
+
+    </p>
+
+      <h4>GitHub actions documentation:</h4>
+    <p>
+        <a ><img src="../../static/images/prod_workflow%20.jpg" class="makeSmaller"></a>
+        <a ><img src="../../static/images/dev_workflow.JPG" class="makeSmaller"></a>
+    </p>
+     Explain how you have the project setup to use GitHub Actions, How you can review code using a development server
+     before merging pull requests, how you can deploy master to a production server. Explain how you deploy an image of
+     your project to Dockerhub when master is updated. GitHub Actions Documentation (Links to an external site.).
     </body>
 {% endblock %}
 </html>

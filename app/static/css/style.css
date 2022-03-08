@@ -30,3 +30,8 @@ body {
 .tab4 {
     margin-left: 100px;
 }
+
+.makeSmaller {
+    width: 35%;
+    height: 35%;
+}
