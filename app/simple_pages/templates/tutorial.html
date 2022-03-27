@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+<!doctype html>
+<html lang="en">
+{% block content %}
+    <body style="background-color:#FEE3C9 ;">
+    <h1>Tutorial</h1>
+    <p>CI/CD is continuous integration and continuous development. CI/CD bridges the gaps between development and
+        operation activities and teams by enforcing automation in building, testing and deployment of applications.
+        According to the continuous delivery article, Martin Fowler explains that "The principal benefits of continuous
+        delivery are: reduced deployment risk, believable progress, and user feedback" (Fowler 2013). Fowler also goes
+        on to state in his continuous integration article, "Continuous Integrations doesn't get rid of bugs, but it
+        does make them dramatically easier to find and remove. In this respect it's rather like self-testing code"
+        (Fowler 2006).
+    </p>
+
+    <h4>Having the project set up to use GitHub actions</h4>
+    <p>
+        In order to have my project setup using GitHub actions, I had to add keys to actions in secrets. I added
+        DOCKER_PASSWORD, DOCKER_USERNAME, and HEROKU_API_KEY. This allowed GitHub to access docker and heroku in order
+        to ship the container and deploy the applications.
+    </p>
+
+    <h4>Review code using a development server before merging pull requests</h4>
+    <p>
+        You can review code using a development server before merging pull requests by testing the code on a
+        development branch, this can result in either passes or failures in pytest. In this project, I used pytest to
+        test my code in a pycharm development branch before merging pull requests into master.
+    </p>
+
+    <h4>Deploy master to a production server</h4>
+    <p>
+        After reviewing the code in a development server, you can decide whether you want the same changes made
+        to the production server. In this project, the prod.yml file specified that every time a push or pull request to
+        the master branch is made, the master branch will deploy the production application.
+    </p>
+
+    <h4>Deploy an image of your project to Dockerhub when master is updated</h4>
+    <p>
+        When master is updated, an image of my project is deployed to dockerhub. This image creates a container that can
+        run on the docker platform.
+    </p>
+
+     <p>
+         <a href=" https://docs.github.com/en/actions">Github actions documentation</a>
+    </p>
+
+
+    </body>3
+{% endblock %}
+</html>
