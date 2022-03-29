@@ -21,5 +21,3 @@ def test_context_variables_year(client):
     content = bytes(test_string, 'utf-8')
     assert response.status_code == 200
     assert content in response.data
-
-
